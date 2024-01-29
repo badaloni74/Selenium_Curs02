@@ -1,11 +1,13 @@
 package com.mesajapp.stepdefinitions.auxiliars;
 
+import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import static com.mesajapp.stepdefinitions.auxiliars.constants.PATH_CHROME_DRIVER;
 
 public interface iniciarWebDriver {
+
 
     default ChromeDriver iniciarWebDriver() {
         System.setProperty("webdriver.chrome.driver", PATH_CHROME_DRIVER);
@@ -16,4 +18,5 @@ public interface iniciarWebDriver {
         driver.manage().window().maximize();
         return driver;
     }
+
 }
