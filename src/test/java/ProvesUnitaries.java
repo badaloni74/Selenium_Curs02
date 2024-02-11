@@ -19,7 +19,7 @@ public class ProvesUnitaries {
 
     @Test
     public void test03(){
-        Assert.assertTrue("Prova fallida: true == false", false);
+        Assert.fail("Prova fallida: true == false");
     }
 
     @Test
