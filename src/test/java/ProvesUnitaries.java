@@ -1,7 +1,8 @@
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 
-public class Prova01 {
+public class ProvesUnitaries {
     public static void main(String[] args) {
         System.out.println("Hello World");
     }
@@ -18,12 +19,17 @@ public class Prova01 {
 
     @Test
     public void test03(){
-        Assert.assertTrue("Prova fallida: true == false", true == false);
+        Assert.assertTrue("Prova fallida: true == false", false);
     }
 
     @Test
     public void test04(){
-        Assert.assertTrue("Prova fallida: true == true", true == true);
+        Assert.assertTrue("Prova fallida: true == true", true);
     }
 
+    @BeforeEach
+    public void setUp() {
+        System.out.println("BeforeEach");
+    }
 }
+

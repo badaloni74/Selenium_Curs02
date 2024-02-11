@@ -1,21 +1,20 @@
 package com.mesajapp.stepdefinitions.auxiliars;
 
-import org.junit.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import static com.mesajapp.stepdefinitions.auxiliars.constants.PATH_CHROME_DRIVER;
-
 public interface iniciarWebDriver {
 
-
-    default ChromeDriver iniciarWebDriver() {
-        System.setProperty("webdriver.chrome.driver", PATH_CHROME_DRIVER);
+    default ChromeDriver iniciaWebDriver() throws InterruptedException {
+        //System.setProperty("webdriver.chrome.driverBaseP", PATH_CHROME_DRIVER);
+        WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--disable-popup-blocking");
         ChromeDriver driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
+        Thread.sleep(2000);
         return driver;
     }
 

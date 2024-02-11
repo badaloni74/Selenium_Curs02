@@ -2,16 +2,14 @@ package com.mesajapp.pageobjects;
 
 import com.mesajapp.arquitectura.BasePO;
 import org.junit.Assert;
-import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class GooglePageObject extends BasePO {
 
-    private String ID_CERCA_TEXTBOX = "APjFqb";
-    private String ID_RESULTATS_LABEL = "result-stats";
-    private String XPATH_CERCA_BUTTON = "//input[@value='Cerca de Google']";
-    private String ID_ACCEPTAR_COOKIES = "L2AGLb";
+    private final String ID_CERCA_TEXTBOX = "APjFqb";
+    private final String ID_RESULTATS_LABEL = "result-stats";
+    private final String XPATH_CERCA_BUTTON = "//input[@value='Cerca de Google']";
+    private final String ID_ACCEPTAR_COOKIES = "L2AGLb";
 
     protected boolean validarPagina() {
         return false;
